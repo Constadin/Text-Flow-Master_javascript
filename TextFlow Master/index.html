@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Flow Master Drag and Drop</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <section id="windowMain">
+
+        <h2>Text Flow Master Drag and Drop</h2>
+        <p style="margin: 0;">*Reading only .text files</p>
+        <button class="accordion">Search</button>
+
+        <div class="panel">
+            <form>
+                <h4>Τext Εditing</h4>
+                <label for="Serch-word">Type Charcters:</label>
+                <input type="text" id="searchTerm" name="Serch-word" maxlength="50" required><br><br>            
+            </form>
+        </div>
+        <button class="accordion">Replace</button>
+        
+        <div class="panel">
+            <form>
+                <h4>Replace the selected one</h4>
+                <label for="Replace">Replace:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="text" id="replace" name="Replace" maxlength="50" required><br><br>
+                <button id="replaceButton">Replace text</button>
+                <button id="selected-text">selected text</button>
+                <span style="color:red; font-size: 1rem;">*επιλέξτε το κείμενο που θα αντικαταστήσετε με το ποντίκι</span>
+            </form>
+            
+        </div>
+
+            <h3>Text recognition ...</h3>
+            <p style="margin: 0;">*Reading only .text files</p>    
+            
+            <!-- Περιοχή Drag and Drop -->
+            <div id="drop-area" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)">
+                <p>Drag and drop files here</p>
+            </div>
+    
+            <!-- Αποτέλεσμα Επεξεργασίας Κειμένου -->
+            <p>This is where the content of the text file will be displayed.</p> 
+            <div id="result"></div>
+            <button id="clearButton">Clear</button>
+        </section>
+    </section>
+
+    <script src="./js/inner.js" defer></script> 
+</body>
+</html>
